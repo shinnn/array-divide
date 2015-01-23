@@ -1,0 +1,31 @@
+{
+  "name": "array-divide",
+  "description": "Divide an array into multiple arrays each of whom have the same number of items",
+  "keywords": [
+    "array",
+    "divide",
+    "separate",
+    "slice",
+    "quotition"
+  ],
+  "main": "browser.js",
+  "homepage": "https://github.com/shinnn/array-divide",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shinnn/array-divide.git"
+  },
+  "authors": [
+    {
+      "name": "Shinnosuke Watanabe",
+      "url": "https://github.com/shinnn"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.js",
+    "*.json",
+    "coverage",
+    "node_modules"
+  ]
+}
