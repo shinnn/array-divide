@@ -1,6 +1,6 @@
 /*!
- * arrray-divide | MIT (c) Shinnosuke Watanabe
- * https://github.com/shinnn/arrray-divide
+ * array-divide | MIT (c) Shinnosuke Watanabe
+ * https://github.com/shinnn/array-divide
 */
 window.arrayDivide = function arrayDivide(arr, count) {
   'use strict';
