@@ -33,7 +33,7 @@ bower install array-divide
 #### [Duo](http://duojs.org/)
 
 ```javascript
-var isVarName = require('shinnn/array-divide');
+var arrayDivide = require('shinnn/array-divide');
 ```
 
 ### Standalone
