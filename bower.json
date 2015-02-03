@@ -25,6 +25,7 @@
     "**/.*",
     "*.js",
     "*.json",
+    "*.yml",
     "coverage",
     "node_modules"
   ]
