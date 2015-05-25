@@ -1,10 +1,10 @@
 # array-divide
 
-[![NPM version](https://img.shields.io/npm/v/array-divide.svg?style=flat)](https://www.npmjs.com/package/array-divide)
-[![Bower version](https://img.shields.io/bower/v/array-divide.svg?style=flat)](https://github.com/shinnn/array-divide/releases)
+[![NPM version](https://img.shields.io/npm/v/array-divide.svg)](https://www.npmjs.com/package/array-divide)
+[![Bower version](https://img.shields.io/bower/v/array-divide.svg)](https://github.com/shinnn/array-divide/releases)
 [![Build Status](https://travis-ci.org/shinnn/array-divide.svg?branch=master)](https://travis-ci.org/shinnn/array-divide)
 [![Build status](https://ci.appveyor.com/api/projects/status/ej0wgflqdijku4c7?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/array-divide)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/array-divide.svg?style=flat)](https://coveralls.io/r/shinnn/array-divide)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/array-divide.svg)](https://coveralls.io/r/shinnn/array-divide)
 [![devDependency Status](https://david-dm.org/shinnn/array-divide/dev-status.svg)](https://david-dm.org/shinnn/array-divide#info=devDependencies)
 
 Divide an array into multiple arrays each of whom have the same number of items
@@ -33,7 +33,7 @@ bower install array-divide
 #### [Duo](http://duojs.org/)
 
 ```javascript
-var arrayDivide = require('shinnn/array-divide');
+const arrayDivide = require('shinnn/array-divide');
 ```
 
 ### Standalone
@@ -52,12 +52,12 @@ Return: `Array` (a new array and doesn't break the original one)
 arrayDivide(['a', 'b', 'c', 'd'], 100); //=> [['a', 'b', 'c', 'd']]
 arrayDivide([], 100); //=> []
 
-arrayDivide(['a', 'b', 'c'], 0); //=> throw an error (count must be >= 1)
-arrayDivide(arguments, 1); //=> throw an error (doesn't support array-like object)
+arrayDivide(['a', 'b', 'c'], 0); // throw an error (count must be >= 1)
+arrayDivide(arguments, 1); // throw an error (doesn't support array-like object)
 ```
 
 ## License
 
-Copyright (c) [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
