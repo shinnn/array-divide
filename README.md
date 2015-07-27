@@ -3,7 +3,6 @@
 [![NPM version](https://img.shields.io/npm/v/array-divide.svg)](https://www.npmjs.com/package/array-divide)
 [![Bower version](https://img.shields.io/bower/v/array-divide.svg)](https://github.com/shinnn/array-divide/releases)
 [![Build Status](https://travis-ci.org/shinnn/array-divide.svg?branch=master)](https://travis-ci.org/shinnn/array-divide)
-[![Build status](https://ci.appveyor.com/api/projects/status/ej0wgflqdijku4c7?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/array-divide)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/array-divide.svg)](https://coveralls.io/r/shinnn/array-divide)
 [![devDependency Status](https://david-dm.org/shinnn/array-divide/dev-status.svg)](https://david-dm.org/shinnn/array-divide#info=devDependencies)
 
