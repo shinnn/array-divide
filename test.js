@@ -1,4 +1,4 @@
-'use strict';
+'use strong';
 
 const requireBowerFiles = require('require-bower-files');
 const test = require('tape');
@@ -36,7 +36,7 @@ function runTest(description, main) {
     );
 
     t.throws(
-      () => main(arguments, 1),
+      () => main(new Set([0, 1, 2]), 1),
       /TypeError.*must be an array/,
       'should throw a type error when the first argument is not an array.'
     );
@@ -60,4 +60,4 @@ runTest('require(\'array-divide\')', require('.'));
 global.window = {};
 requireBowerFiles({self: true});
 
-runTest('window.arrayDivide', window.arrayDivide);
+runTest('window.arrayDivide', global.window.arrayDivide);
