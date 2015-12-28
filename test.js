@@ -5,7 +5,7 @@ const test = require('tape');
 
 function runTest(description, main) {
   test(description, t => {
-    t.plan(8);
+    t.plan(10);
 
     t.equal(main.name, 'arrayDivide', 'should have a function name.');
 
@@ -37,20 +37,32 @@ function runTest(description, main) {
 
     t.throws(
       () => main(new Set([0, 1, 2]), 1),
-      /TypeError.*must be an array/,
+      /^TypeError.*must be an array/,
       'should throw a type error when the first argument is not an array.'
     );
 
     t.throws(
       () => main([], '1'),
-      /TypeError.*must be a number/,
+      /^TypeError.*1 is not a number\. The second argument to array-divide must be a natural number\./,
       'should throw a type error when the second argument is not a number.'
     );
 
     t.throws(
-      () => main([], 0.999999),
-      /RangeError.*must be 1 and more/,
+      () => main([], 1.1),
+      /^Error.*1\.1 is not a natural number\. The second argument to array-divide must be a natural number\./,
+      'should throw a range error when the second argument is not a natural number.'
+    );
+
+    t.throws(
+      () => main([], -1),
+      /^Error.*-1 is not a natural number\. The second argument to array-divide must be a natural number\./,
       'should throw a range error when the second argument is less than 1.'
+    );
+
+    t.throws(
+      () => main([], 0),
+      /^RangeError.*0 is less than 1\. The second argument to array-divide must be a natural number\./,
+      'should throw a range error when the second argument is 0.'
     );
   });
 }

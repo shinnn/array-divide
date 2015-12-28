@@ -2,28 +2,30 @@
  * array-divide | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/array-divide
 */
-module.exports = function arrayDivide(arr, count) {
-  'use strict';
+'use strict';
 
+var isNaturalNumber = require('is-natural-number');
+
+var secondArgErrMsg = ' The second argument to array-divide must be a natural number. (1, 2, 3, ...)';
+
+module.exports = function arrayDivide(arr, count) {
   if (!arr || typeof arr.slice !== 'function') {
     throw new TypeError(
-      arr +
+      String(arr) +
       ' is not an array. The first argument to array-divide must be an array.'
     );
   }
 
   if (typeof count !== 'number') {
-    throw new TypeError(
-      count +
-      ' is not a number. The second argument to array-divide must be a number.'
-    );
+    throw new TypeError(String(count) + ' is not a number.' + secondArgErrMsg);
   }
 
-  if (count < 1) {
-    throw new RangeError(
-      count +
-      ' is less than 1. The second argument to array-divide must be 1 and more.'
-    );
+  if (count === 0) {
+    throw new RangeError('0 is less than 1.' + secondArgErrMsg);
+  }
+
+  if (!isNaturalNumber(count)) {
+    throw new Error(String(count) + ' is not a natural number.' + secondArgErrMsg);
   }
 
   var len = arr.length;

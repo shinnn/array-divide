@@ -20,6 +20,9 @@
     "https://github.com/shinnn"
   ],
   "license": "MIT",
+  "dependencies": {
+    "is-natural-number": "~2.0.0"
+  },
   "ignore": [
     "**/.*",
     "*.js",

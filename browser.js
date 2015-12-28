@@ -2,37 +2,39 @@
  * array-divide | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/array-divide
 */
-window.arrayDivide = function arrayDivide(arr, count) {
+(function() {
   'use strict';
 
-  if (!arr || typeof arr.slice !== 'function') {
-    throw new TypeError(
-      arr +
-      ' is not an array. The first argument to array-divide must be an array.'
-    );
-  }
+  var secondArgErrMsg = ' The second argument to array-divide must be a natural number. (1, 2, 3, ...)';
 
-  if (typeof count !== 'number') {
-    throw new TypeError(
-      count +
-      ' is not a number. The second argument to array-divide must be a number.'
-    );
-  }
+  window.arrayDivide = function arrayDivide(arr, count) {
+    if (!arr || typeof arr.slice !== 'function') {
+      throw new TypeError(
+        String(arr) +
+        ' is not an array. The first argument to array-divide must be an array.'
+      );
+    }
 
-  if (count < 1) {
-    throw new RangeError(
-      count +
-      ' is less than 1. The second argument to array-divide must be 1 and more.'
-    );
-  }
+    if (typeof count !== 'number') {
+      throw new TypeError(String(count) + ' is not a number.' + secondArgErrMsg);
+    }
 
-  var len = arr.length;
-  var index = 0;
-  var result = [];
+    if (count === 0) {
+      throw new RangeError('0 is less than 1.' + secondArgErrMsg);
+    }
 
-  while (index < len) {
-    result.push(arr.slice(index, index += count));
-  }
+    if (!window.isNaturalNumber(count)) {
+      throw new Error(String(count) + ' is not a natural number.' + secondArgErrMsg);
+    }
 
-  return result;
-};
+    var len = arr.length;
+    var index = 0;
+    var result = [];
+
+    while (index < len) {
+      result.push(arr.slice(index, index += count));
+    }
+
+    return result;
+  };
+})();

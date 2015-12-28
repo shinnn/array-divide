@@ -5,9 +5,9 @@
   "repository": "shinnn/array-divide",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --config @shinnn --ignore-path .gitignore .",
+    "pretest": "eslint --config @shinnn --ignore-path .gitignore . && bower install",
     "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js | tap-spec",
-    "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js"
+    "coverage": "node --strong_mode node_modules/.bin/istanbul cover -x=bower_components/** test.js"
   },
   "license": "MIT",
   "files": [
@@ -22,8 +22,12 @@
     "browser",
     "client-side"
   ],
+  "dependencies": {
+    "is-natural-number": "^2.0.0"
+  },
   "devDependencies": {
     "@shinnn/eslint-config": "^1.4.0",
+    "bower": "^1.7.2",
     "eslint": "^1.10.3",
     "istanbul": "^0.4.1",
     "require-bower-files": "^3.0.0",
