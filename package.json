@@ -1,6 +1,6 @@
 {
   "name": "array-divide",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Divide an array into multiple arrays each of whom have the same number of items",
   "repository": "shinnn/array-divide",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
