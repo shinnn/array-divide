@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "is-natural-number": "~2.0.0"
+    "is-natural-number": "~4.0.1"
   },
   "ignore": [
     "**/.*",

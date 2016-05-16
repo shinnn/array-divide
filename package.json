@@ -23,7 +23,7 @@
     "client-side"
   ],
   "dependencies": {
-    "is-natural-number": "^2.0.0"
+    "is-natural-number": "^4.0.1"
   },
   "devDependencies": {
     "@shinnn/eslint-config": "^2.0.0",
